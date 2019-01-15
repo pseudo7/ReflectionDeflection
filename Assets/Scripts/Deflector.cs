@@ -7,6 +7,7 @@ public class Deflector : MonoBehaviour
     public TextMesh mirrorText;
     public TextMesh incidentText;
     public Transform mirrorTransform;
+    public Transform board;
 
     public void Deflect(Vector3 angle)
     {
@@ -22,6 +23,11 @@ public class Deflector : MonoBehaviour
     string GetMirrorAngle()
     {
         return string.Format("Mirror: {0}", GetIntAngle());
+    }
+
+    private void LateUpdate()
+    {
+        board.LookAt(Camera.main.transform);
     }
 
     int GetIntAngle()
