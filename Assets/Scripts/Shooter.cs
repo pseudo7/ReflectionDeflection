@@ -38,7 +38,7 @@ public class Shooter : MonoBehaviour
     {
         RaycastHit hit;
         if (Physics.Raycast(player.position, Camera.main.transform.forward, out hit))
-            if (hit.collider.CompareTag("Mirror"))
+            if (hit.collider.CompareTag(Constants.MIRROR_TAG))
             {
                 var ball = Instantiate(ballPrefab, mainCamTransform.position, Quaternion.identity);
                 ball.GetComponent<Ball>().initialVelocity = (hit.transform.position - mainCamTransform.position).normalized * shootingSpeed;

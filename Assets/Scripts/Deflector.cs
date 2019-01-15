@@ -5,7 +5,6 @@ using UnityEngine;
 public class Deflector : MonoBehaviour
 {
     public TextMesh mirrorText;
-    public TextMesh incidentText;
     public Transform mirrorTransform;
     public Transform board;
 
@@ -15,14 +14,9 @@ public class Deflector : MonoBehaviour
         mirrorText.text = GetMirrorAngle();
     }
 
-    public void Reflect(float angle)
-    {
-        incidentText.text = string.Format("Incident: {0}", Mathf.RoundToInt(angle));
-    }
-
     string GetMirrorAngle()
     {
-        return string.Format("Mirror: {0}", GetIntAngle());
+        return string.Format("{0}°", GetIntAngle());
     }
 
     private void LateUpdate()
