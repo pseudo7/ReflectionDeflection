@@ -11,4 +11,10 @@ public class PseudoButton : MonoBehaviour
     {
         GetComponentInParent<Deflector>().Deflect(angle);
     }
+
+    public void ButtonPress()
+    {
+        Debug.Log("Command Entered");
+        GetComponentInParent<Deflector>().Deflect(angle);
+    }
 }
