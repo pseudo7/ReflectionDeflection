@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114082600777134136}
   m_Layer: 0
   m_Name: Rotate_P
-  m_TagString: Untagged
+  m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 114339904404953240}
   m_Layer: 0
   m_Name: Rotate_N
-  m_TagString: Untagged
+  m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
