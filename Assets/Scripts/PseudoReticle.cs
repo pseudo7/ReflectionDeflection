@@ -40,6 +40,7 @@ public class PseudoReticle : MonoBehaviour
                     buttonPressed = true;
                 }
             }
+            else ResetReticle();
         }
         else ResetReticle();
     }

@@ -8,7 +8,7 @@ public class Shooter : MonoBehaviour
 
     [SerializeField] GameObject ballPrefab;
     [SerializeField] int shootingSpeed = 2;
-
+    [SerializeField] int destroyDelay = 10;
     Transform mainCamTransform;
     Camera mainCam;
 
@@ -42,6 +42,7 @@ public class Shooter : MonoBehaviour
                 var ball = Instantiate(ballPrefab, mainCamTransform.position, Quaternion.identity);
                 ball.GetComponent<Ball>().initialVelocity = (hit.transform.position - mainCamTransform.position).normalized * shootingSpeed;
                 ball.SetActive(true);
+                Destroy(ball, destroyDelay);
             }
     }
 }
