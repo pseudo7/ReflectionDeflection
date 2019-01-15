@@ -206,8 +206,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialVelocity: {x: 0, y: 0, z: 0}
-  minVelocity: 10
-  deflectsRemaining: 10
+  minVelocity: 5
+  deflectsRemaining: 20
 --- !u!135 &135460415962931888
 SphereCollider:
   m_ObjectHideFlags: 1
