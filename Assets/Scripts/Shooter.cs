@@ -38,6 +38,10 @@ public class Shooter : MonoBehaviour
         Debug.DrawRay(mouseNear, mouseFar - mouseNear, Color.green);
         if (Physics.Raycast(mouseNear, mouseFar - mouseNear, out hit))
             if (hit.collider.CompareTag("Mirror"))
-                Instantiate(ballPrefab, mainCamTransform.position, Quaternion.identity);
+            {
+                var ball = Instantiate(ballPrefab, mainCamTransform.position, Quaternion.identity);
+                ball.GetComponent<Ball>().initialVelocity = (hit.transform.position - mainCamTransform.position).normalized * shootingSpeed;
+                ball.SetActive(true);
+            }
     }
 }

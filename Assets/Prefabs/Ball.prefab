@@ -30,7 +30,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4047720956127884
 Transform:
   m_ObjectHideFlags: 1
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a356e6643bf524548bf8845b7e59bc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialVelocity: {x: 0, y: 0, z: 5}
+  initialVelocity: {x: 0, y: 0, z: 0}
   minVelocity: 10
   deflectsRemaining: 50
 --- !u!135 &135460415962931888
