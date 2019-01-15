@@ -6,6 +6,7 @@ public class Shooter : MonoBehaviour
 {
     public static Shooter Instance;
 
+    [SerializeField] Transform player;
     [SerializeField] GameObject ballPrefab;
     [SerializeField] int shootingSpeed = 2;
     [SerializeField] int destroyDelay = 10;
@@ -24,19 +25,19 @@ public class Shooter : MonoBehaviour
         mainCamTransform = mainCam.transform;
     }
 
+#if UNITY_EDITOR
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
             Shoot();
+
     }
+#endif
 
     public void Shoot()
     {
         RaycastHit hit;
-        Vector3 mouseFar = mainCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, mainCam.farClipPlane));
-        Vector3 mouseNear = mainCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, mainCam.nearClipPlane));
-        Debug.DrawRay(mouseNear, mouseFar - mouseNear, Color.green);
-        if (Physics.Raycast(mouseNear, mouseFar - mouseNear, out hit))
+        if (Physics.Raycast(player.position, Camera.main.transform.forward, out hit))
             if (hit.collider.CompareTag("Mirror"))
             {
                 var ball = Instantiate(ballPrefab, mainCamTransform.position, Quaternion.identity);
@@ -44,5 +45,7 @@ public class Shooter : MonoBehaviour
                 ball.SetActive(true);
                 Destroy(ball, destroyDelay);
             }
+            else Debug.LogWarning("TAG: " + hit.collider.tag);
+        else Debug.Log("Nothing to Shoot");
     }
 }

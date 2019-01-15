@@ -15,6 +15,8 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
 #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.UpArrow))
             PseudoCheckpoints.Instance.MoveForward(transform);

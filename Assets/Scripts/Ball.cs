@@ -4,7 +4,7 @@ public class Ball : MonoBehaviour
 {
     public Vector3 initialVelocity;
     [SerializeField] float minVelocity = 10f;
-    [SerializeField] int deflectsRemaining = 5;
+    [SerializeField] int deflectsRemaining = 10;
 
     Vector3 prevVelocity;
     Rigidbody ballRB;

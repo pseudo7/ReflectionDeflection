@@ -35,8 +35,10 @@ public class PseudoReticle : MonoBehaviour
                     var mirror = hit.collider.GetComponent<Mirror>();
                     if (pseudoButton)
                         PseudoButtonPress(pseudoButton);
-                    else if (mirror)
+                    else Debug.LogWarning("No Pseudo Button");
+                    if (mirror)
                         Shooter.Instance.Shoot();
+                    else Debug.LogWarning("No Mirror Component");
                     buttonPressed = true;
                 }
             }
