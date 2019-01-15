@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PseudoReticle : MonoBehaviour
 {
     [SerializeField] Image reticleImg;
+    [SerializeField] float reticleSpeed = 2f;
     [SerializeField] float maxDistance = 3f;
     Camera mainCam;
     RaycastHit hit;
@@ -26,17 +27,17 @@ public class PseudoReticle : MonoBehaviour
             {
                 if (buttonPressed)
                     return;
-                if (countdown < 1)
+                if (countdown < reticleSpeed)
                     FillReticle(countdown += Time.deltaTime);
                 else
                 {
-                    buttonPressed = true;
                     var pseudoButton = hit.collider.GetComponent<PseudoButton>();
                     var mirror = hit.collider.GetComponent<Mirror>();
                     if (pseudoButton)
                         PseudoButtonPress(pseudoButton);
-                    if (mirror)
+                    else if (mirror)
                         Shooter.Instance.Shoot();
+                    buttonPressed = true;
                 }
             }
         }
@@ -50,7 +51,7 @@ public class PseudoReticle : MonoBehaviour
 
     void FillReticle(float val)
     {
-        reticleImg.fillAmount = val;
+        reticleImg.fillAmount = val / reticleSpeed;
     }
 
     void ResetReticle()

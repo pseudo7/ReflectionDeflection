@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider))]
 public class PseudoButton : MonoBehaviour
 {
+    public PseudoButtonType buttonType;
     public Vector3 angle;
 
     private void OnMouseUpAsButton()
@@ -14,7 +15,17 @@ public class PseudoButton : MonoBehaviour
 
     public void ButtonPress()
     {
-        Debug.Log("Command Entered");
-        GetComponentInParent<Deflector>().Deflect(angle);
+        switch (buttonType)
+        {
+            case PseudoButtonType.RotationButton:
+                GetComponentInParent<Deflector>().Deflect(angle);
+                break;
+            case PseudoButtonType.MovementButton:
+                break;
+        }
     }
+}
+public enum PseudoButtonType
+{
+    RotationButton, MovementButton
 }
