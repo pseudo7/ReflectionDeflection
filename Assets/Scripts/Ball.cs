@@ -2,11 +2,9 @@
 
 public class Ball : MonoBehaviour
 {
-    [SerializeField]
-    Vector3 initialVelocity;
-
-    [SerializeField]
-    float minVelocity = 10f;
+    [SerializeField] Vector3 initialVelocity;
+    [SerializeField] float minVelocity = 10f;
+    [SerializeField] int deflectsRemaining = 5;
 
     Vector3 prevVelocity;
     Rigidbody ballRB;
@@ -24,6 +22,8 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        if (--deflectsRemaining <= 0)
+            Destroy(gameObject);
         Bounce(collision.contacts[0].normal);
     }
 
