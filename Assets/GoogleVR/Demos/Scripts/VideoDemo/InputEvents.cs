@@ -12,23 +12,32 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-
 namespace GoogleVR.VideoDemo {
+  using System;
   using UnityEngine;
+  using UnityEngine.Events;
 
-  /// <summary>
-  /// Provides controller app button input through UnityEvents.
-  /// </summary>
-  public class AppButtonInput : MonoBehaviour {
-    public ButtonEvent OnAppUp;
-    public ButtonEvent OnAppDown;
+  [Serializable]
+  public class Vector3Event : UnityEvent<Vector3> { }
 
-    void Update() {
-      if (Gvr.Internal.ControllerUtils.AnyButtonUp(GvrControllerButton.App))
-        OnAppUp.Invoke();
+  [Serializable]
+  public class Vector2Event : UnityEvent<Vector2> { }
 
-      if (Gvr.Internal.ControllerUtils.AnyButtonDown(GvrControllerButton.App))
-        OnAppDown.Invoke();
-    }
-  }
+  [Serializable]
+  public class FloatEvent : UnityEvent<float> { }
+
+  [Serializable]
+  public class BoolEvent : UnityEvent<bool> { }
+
+  [Serializable]
+  public class ButtonEvent : UnityEvent { }
+
+  [Serializable]
+  public class TouchPadEvent : UnityEvent { }
+
+  [Serializable]
+  public class TransformEvent : UnityEvent<Transform> { }
+
+  [Serializable]
+  public class GameObjectEvent : UnityEvent<GameObject> { }
 }
