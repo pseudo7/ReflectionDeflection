@@ -62,7 +62,7 @@ public class GroundMech : MonoBehaviour
     void Shoot()
     {
         var spawnedMissile = Instantiate(missile, (switchBarrel = !switchBarrel) ? leftBarrel.position : rightBarrel.position, missile.transform.rotation, transform);
-        spawnedMissile.GetComponent<Rigidbody>().AddForce((mainCamTransform.position - transform.position).normalized * shootingSpeed, ForceMode.VelocityChange);
+        spawnedMissile.GetComponent<Rigidbody>().AddForce((mainCamTransform.position - transform.position + Vector3.down).normalized * shootingSpeed, ForceMode.VelocityChange);
         Destroy(spawnedMissile, 2);
         countdown = 0;
     }

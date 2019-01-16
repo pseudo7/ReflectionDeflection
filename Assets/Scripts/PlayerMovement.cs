@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     Transform mainCamTransform;
     bool allowStrife = true;
@@ -40,6 +40,7 @@ public class Movement : MonoBehaviour
             Debug.Log("DEAD");
             Time.timeScale = 0;
             StopAllCoroutines();
+            ScreenController.Instance.ShowAndHide("Die Mofo!!", 2);
         }
     }
 
