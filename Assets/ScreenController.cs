@@ -47,7 +47,7 @@ public class ScreenController : MonoBehaviour
         while (screen.localScale != scale)
         {
             screen.localScale = Vector3.MoveTowards(screen.localScale, scale, Time.deltaTime);
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSecondsRealtime(Time.fixedDeltaTime);
         }
         scaling = false;
     }

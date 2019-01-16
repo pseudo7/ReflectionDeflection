@@ -38,9 +38,8 @@ public class PlayerMovement : MonoBehaviour
         else if (other.CompareTag(Constants.FINISH_TAG))
         {
             Debug.Log("DEAD");
-            Time.timeScale = 0;
             StopAllCoroutines();
-            ScreenController.Instance.ShowAndHide("Die Mofo!!", 2);
+            ScreenController.Instance.ShowAndHide("You are\nDEAD!!", 2);
         }
     }
 
