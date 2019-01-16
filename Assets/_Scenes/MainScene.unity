@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 156436418}
   m_Layer: 2
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9577,7 +9577,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 995008563
+  randomSeed: 1392110304
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -12906,7 +12906,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1156278168}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0, z: 7}
+  m_LocalPosition: {x: 5, y: 0, z: 6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -17108,7 +17108,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4197154993613474, guid: 81d06f6b5c5f7a24bb988c6a9523ac17, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4197154993613474, guid: 81d06f6b5c5f7a24bb988c6a9523ac17, type: 2}
       propertyPath: m_LocalRotation.x
@@ -17843,9 +17843,10 @@ GameObject:
   - component: {fileID: 1665281282}
   - component: {fileID: 1665281280}
   - component: {fileID: 1665281284}
-  m_Layer: 11
+  - component: {fileID: 1665281285}
+  m_Layer: 0
   m_Name: Ground_Mech
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17930,13 +17931,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ef66ceced2e1048b8ea2eb76dae0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
-  movingSpeed: 1
-  rotateSpeed: 250
   healthPivot: {fileID: 402390331}
   healthBar: {fileID: 1824828056}
   startBound: {fileID: 1307132550}
   endBound: {fileID: 552093973}
+  leftBarrel: {fileID: 1476231726}
+  rightBarrel: {fileID: 1680460077}
+  missile: {fileID: 1109225236244570, guid: 3bdc58e2ac6ca234c8fd3fdcc88c74cb, type: 2}
+  health: 3
+  movingSpeed: 1
+  rotateSpeed: 250
+  fireRate: 5
+--- !u!65 &1665281285
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1665281279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 30, z: 500}
+  m_Center: {x: 0, y: 12, z: 0}
 --- !u!1001 &1669862677
 Prefab:
   m_ObjectHideFlags: 0

@@ -6,6 +6,8 @@ public class PseudoCheckpoints : MonoBehaviour
 {
     public static PseudoCheckpoints Instance;
 
+    public static int CurrentCheckPoint { get { return currentIndex; } }
+
     public Transform[] checkPoints;
     public float moveSpeed = 10f;
     public float rotateSpeed = 50f;

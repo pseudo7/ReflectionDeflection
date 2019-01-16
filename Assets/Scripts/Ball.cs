@@ -22,7 +22,7 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (--deflectsRemaining <= 0)
+        if (--deflectsRemaining <= 0 || collision.collider.CompareTag(Constants.ENEMY_TAG))
             Destroy(gameObject);
         Bounce(collision.contacts[0].normal);
     }

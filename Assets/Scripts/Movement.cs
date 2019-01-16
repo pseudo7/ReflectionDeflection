@@ -32,8 +32,14 @@ public class Movement : MonoBehaviour
     {
         if (other.CompareTag(Constants.VALUABLE_TAG))
         {
-            Destroy(other.gameObject);
             Debug.Log("Level Finished");
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag(Constants.FINISH_TAG))
+        {
+            Debug.Log("DEAD");
+            Time.timeScale = 0;
+            StopAllCoroutines();
         }
     }
 

@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class GroundMech : MonoBehaviour
 {
-    [SerializeField] int health = 3;
-    [SerializeField] float movingSpeed = 10;
-    [SerializeField] float rotateSpeed = 50;
     [SerializeField] Transform healthPivot;
     [SerializeField] Transform healthBar;
     [SerializeField] Transform startBound, endBound;
+    [SerializeField] Transform leftBarrel, rightBarrel;
+    [SerializeField] GameObject missile;
+    [SerializeField] int health = 3;
+    [SerializeField] float movingSpeed = 10;
+    [SerializeField] float shootingSpeed = 10;
+    [SerializeField] float rotateSpeed = 50;
+    [SerializeField] float fireRate = 5;
 
     Coroutine oscillate;
     Transform mainCamTransform;
+    float countdown;
     int origHealth;
     bool moving;
     bool switchDir = true;
+    bool switchBarrel;
 
     void Start()
     {
@@ -26,15 +32,39 @@ public class GroundMech : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (health <= 0)
-            return;
-        if (--health <= 0)
+        if (collision.collider.CompareTag(Constants.FINISH_TAG) && health > 0)
         {
-            StopCoroutine(oscillate);
-            transform.GetChild(0).gameObject.SetActive(true);
-            Destroy(gameObject, 2);
+            if (--health <= 0)
+            {
+                StopCoroutine(oscillate);
+                transform.GetChild(0).gameObject.SetActive(true);
+                Destroy(gameObject, 2);
+            }
+            UpdateHealth(health);
         }
-        UpdateHealth(health);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.CompareTag(Constants.PLAYER_TAG))
+            FireAtRate();
+    }
+
+    void FireAtRate()
+    {
+        if (PseudoCheckpoints.CurrentCheckPoint > 6)
+        {
+            if (countdown > 1 / fireRate)
+                Shoot();
+            else countdown += Time.deltaTime;
+        }
+    }
+    void Shoot()
+    {
+        var spawnedMissile = Instantiate(missile, (switchBarrel = !switchBarrel) ? leftBarrel.position : rightBarrel.position, missile.transform.rotation, transform);
+        spawnedMissile.GetComponent<Rigidbody>().AddForce((mainCamTransform.position - transform.position).normalized * shootingSpeed, ForceMode.VelocityChange);
+        Destroy(spawnedMissile, 2);
+        countdown = 0;
     }
 
     private void LateUpdate()
