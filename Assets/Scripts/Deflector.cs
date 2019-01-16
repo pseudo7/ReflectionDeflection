@@ -8,6 +8,13 @@ public class Deflector : MonoBehaviour
     public Transform mirrorTransform;
     public Transform board;
 
+    static Transform mainCamTransform;
+
+    private void Start()
+    {
+        mainCamTransform = Camera.main.transform;
+    }
+
     public void Deflect(Vector3 angle)
     {
         mirrorTransform.Rotate(angle, Space.Self);
@@ -21,7 +28,7 @@ public class Deflector : MonoBehaviour
 
     private void LateUpdate()
     {
-        board.LookAt(Camera.main.transform);
+        board.LookAt(mainCamTransform);
     }
 
     int GetIntAngle()

@@ -31,7 +31,7 @@ public class Movement : MonoBehaviour
 
     void CheckStrife()
     {
-        if (Vector3.Angle(mainCamTransform.forward, mainCamTransform.parent.forward) < 90)
+        if (Vector3.Angle(mainCamTransform.forward, mainCamTransform.forward) < 90)
         {
             if (Input.acceleration.x < -.4f)
                 MovePlayerLeft();
