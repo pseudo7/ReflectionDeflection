@@ -2,4 +2,5 @@
 {
     public const string MIRROR_TAG = "Mirror";
     public const string CLICKABLE_TAG = "Clickable";
+    public const string VALUABLE_TAG = "Valuable";
 }

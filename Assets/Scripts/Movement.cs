@@ -28,6 +28,14 @@ public class Movement : MonoBehaviour
 #endif
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag(Constants.VALUABLE_TAG))
+        {
+            Destroy(other.gameObject);
+            Debug.Log("Level Finished");
+        }
+    }
 
     void CheckStrife()
     {

@@ -19,6 +19,7 @@ public class GroundMech : MonoBehaviour
 
     void Start()
     {
+        origHealth = health;
         oscillate = StartCoroutine(Oscillate());
         mainCamTransform = Camera.main.transform;
     }

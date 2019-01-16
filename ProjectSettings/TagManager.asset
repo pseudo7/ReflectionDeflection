@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Mirror
   - Clickable
+  - GroundMech
+  - Valuable
   layers:
   - Default
   - TransparentFX
