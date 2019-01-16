@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScreenController : MonoBehaviour
 {
@@ -17,20 +18,28 @@ public class ScreenController : MonoBehaviour
             Instance = this;
     }
 
-    public void ShowScreen(string message)
+    public void ShowScreen(Color color, string message)
     {
+        if (scaling)
+            return;
         messageText.text = message;
+        messageText.color = color;
         StartCoroutine(ChangeScale(new Vector3(3, 1.5f, 1)));
     }
 
     public void HideScreen()
     {
+        if (scaling)
+            return;
         StartCoroutine(ChangeScale(new Vector3(0, 0, 1)));
     }
 
-    public void ShowAndHide(string message, float delay)
+    public void ShowAndHide(Color color, string message, float delay)
     {
+        if (scaling)
+            return;
         messageText.text = message;
+        messageText.color = color;
         StartCoroutine(ShowingAndHiding(delay));
     }
 
@@ -38,7 +47,8 @@ public class ScreenController : MonoBehaviour
     {
         yield return StartCoroutine(ChangeScale(new Vector3(3, 1.5f, 1)));
         yield return new WaitForSecondsRealtime(delay);
-        StartCoroutine(ChangeScale(new Vector3(0, 0, 1)));
+        yield return StartCoroutine(ChangeScale(new Vector3(0, 0, 1)));
+        RestartScene();
     }
 
     IEnumerator ChangeScale(Vector3 scale)
@@ -50,5 +60,10 @@ public class ScreenController : MonoBehaviour
             yield return new WaitForSecondsRealtime(Time.fixedDeltaTime);
         }
         scaling = false;
+    }
+
+    public void RestartScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

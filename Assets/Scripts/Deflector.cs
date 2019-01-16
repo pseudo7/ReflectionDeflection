@@ -28,7 +28,7 @@ public class Deflector : MonoBehaviour
 
     private void LateUpdate()
     {
-        board.LookAt(mainCamTransform);
+        board.LookAt(Utility.mainCameraTransform);
     }
 
     int GetIntAngle()

@@ -32,6 +32,8 @@ public class GroundMech : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (Utility.isGameOver)
+            return;
         if (collision.collider.CompareTag(Constants.FINISH_TAG) && health > 0)
         {
             if (--health <= 0)
@@ -46,6 +48,8 @@ public class GroundMech : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        if (Utility.isGameOver)
+            return;
         if (collision.collider.CompareTag(Constants.PLAYER_TAG))
             FireAtRate();
     }
@@ -62,14 +66,19 @@ public class GroundMech : MonoBehaviour
     void Shoot()
     {
         var spawnedMissile = Instantiate(missile, (switchBarrel = !switchBarrel) ? leftBarrel.position : rightBarrel.position, missile.transform.rotation, transform);
-        spawnedMissile.GetComponent<Rigidbody>().AddForce((mainCamTransform.position - transform.position + Vector3.down).normalized * shootingSpeed, ForceMode.VelocityChange);
+        spawnedMissile.GetComponent<Rigidbody>().AddForce((Utility.mainCameraTransform.position - transform.position + Vector3.down).normalized * shootingSpeed, ForceMode.VelocityChange);
         Destroy(spawnedMissile, 2);
         countdown = 0;
     }
 
     private void LateUpdate()
     {
-        healthBar.rotation = Quaternion.LookRotation(mainCamTransform.position - healthBar.position);
+        if (Utility.isGameOver)
+        {
+            StopCoroutine(oscillate);
+            return;
+        }
+        healthBar.rotation = Quaternion.LookRotation(Utility.mainCameraTransform.position - healthBar.position);
     }
 
     void UpdateHealth(int h)

@@ -51,8 +51,8 @@ public class Shooter : MonoBehaviour
                 if (recoiling)
                     return;
                 StartCoroutine(Recoiling());
-                var ball = Instantiate(ballPrefab, mainCamTransform.position, Quaternion.identity);
-                ball.GetComponent<Ball>().initialVelocity = (hit.transform.position - mainCamTransform.position).normalized * shootingSpeed;
+                var ball = Instantiate(ballPrefab, Utility.mainCameraTransform.position, Quaternion.identity);
+                ball.GetComponent<Ball>().initialVelocity = (hit.transform.position - Utility.mainCameraTransform.position).normalized * shootingSpeed;
                 ball.SetActive(true);
                 Destroy(ball, destroyDelay);
             }

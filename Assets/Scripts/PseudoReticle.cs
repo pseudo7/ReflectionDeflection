@@ -21,7 +21,12 @@ public class PseudoReticle : MonoBehaviour
 
     void Update()
     {
-        if (Physics.Raycast(mainCam.transform.position, mainCam.transform.forward, out hit, maxDistance))
+        if (Utility.isGameOver)
+        {
+            ResetReticle();
+            return;
+        }
+        if (Physics.Raycast(Utility.mainCameraTransform.transform.position, Utility.mainCameraTransform.transform.forward, out hit, maxDistance))
         {
             if (hit.collider.CompareTag(Constants.MIRROR_TAG) || hit.collider.CompareTag(Constants.CLICKABLE_TAG))
             {

@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Utility.isGameOver)
+            return;
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 #if UNITY_EDITOR
@@ -33,19 +35,20 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag(Constants.VALUABLE_TAG))
         {
             Debug.Log("Level Finished");
+            ScreenController.Instance.ShowAndHide(Color.white, "You WIN!!", 2);
             Destroy(other.gameObject);
         }
         else if (other.CompareTag(Constants.FINISH_TAG))
         {
             Debug.Log("DEAD");
             StopAllCoroutines();
-            ScreenController.Instance.ShowAndHide("You are\nDEAD!!", 2);
+            ScreenController.Instance.ShowAndHide(Color.red, "You are\nDEAD!!", 2);
         }
     }
 
     void CheckStrife()
     {
-        if (Vector3.Angle(mainCamTransform.forward, mainCamTransform.forward) < 90)
+        if (Vector3.Angle(Utility.mainCameraTransform.forward, Utility.mainCameraTransform.forward) < 90)
         {
             if (Input.acceleration.x < -.4f)
                 MovePlayerLeft();
