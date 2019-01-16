@@ -6,4 +6,5 @@
     public const string ENEMY_TAG = "Enemy";
     public const string PLAYER_TAG = "Player";
     public const string FINISH_TAG = "Finish";
+    public const string BALL_TAG = "Ball";
 }

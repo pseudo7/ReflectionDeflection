@@ -9,6 +9,7 @@ public class ScreenController : MonoBehaviour
 
     [SerializeField] Transform screen;
     [SerializeField] TextMesh messageText;
+    [SerializeField] float speed = 3;
 
     bool scaling;
 
@@ -56,8 +57,8 @@ public class ScreenController : MonoBehaviour
         scaling = true;
         while (screen.localScale != scale)
         {
-            screen.localScale = Vector3.MoveTowards(screen.localScale, scale, Time.deltaTime);
-            yield return new WaitForSecondsRealtime(Time.fixedDeltaTime);
+            screen.localScale = Vector3.MoveTowards(screen.localScale, scale, Time.fixedDeltaTime);
+            yield return new WaitForSecondsRealtime(Time.fixedDeltaTime * 1 / speed);
         }
         scaling = false;
     }

@@ -9,6 +9,7 @@ TagManager:
   - GroundMech
   - Valuable
   - Enemy
+  - Ball
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GroundMech : MonoBehaviour
 {
+    public bool fire;
     [SerializeField] Transform healthPivot;
     [SerializeField] Transform healthBar;
     [SerializeField] Transform startBound, endBound;
@@ -34,7 +35,7 @@ public class GroundMech : MonoBehaviour
     {
         if (Utility.isGameOver)
             return;
-        if (collision.collider.CompareTag(Constants.FINISH_TAG) && health > 0)
+        if (collision.collider.CompareTag(Constants.BALL_TAG) && health > 0)
         {
             if (--health <= 0)
             {
@@ -46,13 +47,21 @@ public class GroundMech : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay(Collision collision)
-    {
-        if (Utility.isGameOver)
-            return;
-        if (collision.collider.CompareTag(Constants.PLAYER_TAG))
-            FireAtRate();
-    }
+    //private void OnCollisionStay(Collision collision)
+    //{
+    //    if (Utility.isGameOver)
+    //        return;
+    //    if (collision.collider.CompareTag(Constants.PLAYER_TAG))
+    //        FireAtRate();
+    //}
+
+    //private void OnTriggerStay(Collider other)
+    //{
+    //    if (Utility.isGameOver)
+    //        return;
+    //    if (other.CompareTag(Constants.PLAYER_TAG))
+    //        FireAtRate();
+    //}
 
     void FireAtRate()
     {
@@ -73,6 +82,8 @@ public class GroundMech : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (fire)
+            FireAtRate();
         if (Utility.isGameOver)
         {
             StopCoroutine(oscillate);
@@ -83,7 +94,7 @@ public class GroundMech : MonoBehaviour
 
     void UpdateHealth(int h)
     {
-        healthPivot.localScale = new Vector3(origHealth - h / (float)(origHealth), 2f, 1f);
+        healthPivot.localScale = new Vector3(h / (float)(origHealth), 1f, 1f);
     }
 
     IEnumerator Oscillate()

@@ -9,6 +9,7 @@ public class Utility : MonoBehaviour
 
     private void Start()
     {
+        PseudoCheckpoints.CurrentCheckPoint = 0;
         mainCameraTransform = Camera.main.transform;
         isGameOver = false;
     }

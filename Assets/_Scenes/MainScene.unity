@@ -328,7 +328,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 153462296}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 348053607}
   - component: {fileID: 348053609}
   - component: {fileID: 348053608}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left_foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 402390331}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1043,7 +1043,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 919d2394efa1487419c72f6191e9ca4d, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1062,7 +1062,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 518850379}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_left_ankle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1148,7 +1148,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 539983900}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 540804758}
   - component: {fileID: 540804760}
   - component: {fileID: 540804759}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KYcircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4638,7 +4638,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 544159510}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_right_knee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4698,7 +4698,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 588727165}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right_foot_ctrl_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4729,7 +4729,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 603295397}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hip_ctrl_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4768,7 +4768,7 @@ GameObject:
   - component: {fileID: 626165766}
   - component: {fileID: 626165768}
   - component: {fileID: 626165767}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right_leg_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5138,7 +5138,7 @@ GameObject:
   - component: {fileID: 778826864}
   - component: {fileID: 778826866}
   - component: {fileID: 778826865}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: WhityBomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8717,7 +8717,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 818806987}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ikHandle6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8747,7 +8747,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 818879886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8780,7 +8780,7 @@ GameObject:
   - component: {fileID: 824906722}
   - component: {fileID: 824906724}
   - component: {fileID: 824906723}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: missile_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8860,7 +8860,7 @@ GameObject:
   - component: {fileID: 855461074}
   - component: {fileID: 855461076}
   - component: {fileID: 855461075}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hip_connection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8933,7 +8933,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 893499482}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_left_toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8965,7 +8965,7 @@ GameObject:
   - component: {fileID: 929397618}
   - component: {fileID: 929397620}
   - component: {fileID: 929397619}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9093,6 +9093,75 @@ Transform:
   m_PrefabParentObject: {fileID: 4197154993613474, guid: 81d06f6b5c5f7a24bb988c6a9523ac17,
     type: 2}
   m_PrefabInternal: {fileID: 1005399232}
+--- !u!1 &1005493091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1005493092}
+  - component: {fileID: 1005493094}
+  - component: {fileID: 1005493093}
+  - component: {fileID: 1005493095}
+  m_Layer: 0
+  m_Name: DetectPlayer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1005493092
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005493091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1665281281}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1005493093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005493091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ddda300441b00146aba8706286203fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &1005493094
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005493091}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 30, z: 500}
+  m_Center: {x: 0, y: 12, z: 0}
+--- !u!54 &1005493095
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1005493091}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1001 &1010609453
 Prefab:
   m_ObjectHideFlags: 0
@@ -9180,7 +9249,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1026394124}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left_foot_ctrl_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9211,7 +9280,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1072477349}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9249,7 +9318,7 @@ GameObject:
   - component: {fileID: 1097039436}
   - component: {fileID: 1097039438}
   - component: {fileID: 1097039437}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9333,7 +9402,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1113832123}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_right_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9457,6 +9526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   screen: {fileID: 456971042}
   messageText: {fileID: 2044702114}
+  speed: 3
 --- !u!114 &1123724377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9479,7 +9549,7 @@ GameObject:
   - component: {fileID: 1155324564}
   - component: {fileID: 1155324566}
   - component: {fileID: 1155324565}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: hip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13194,7 +13264,7 @@ GameObject:
   - component: {fileID: 1272397346}
   - component: {fileID: 1272397348}
   - component: {fileID: 1272397347}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left_toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13267,7 +13337,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1276063359}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_torso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13298,7 +13368,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1287951286}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13331,7 +13401,7 @@ GameObject:
   - component: {fileID: 1295032651}
   - component: {fileID: 1295032653}
   - component: {fileID: 1295032652}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left_leg_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13432,7 +13502,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1321755876}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13565,7 +13635,7 @@ GameObject:
   - component: {fileID: 1370748759}
   - component: {fileID: 1370748761}
   - component: {fileID: 1370748760}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right_toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13645,7 +13715,7 @@ GameObject:
   - component: {fileID: 1391197668}
   - component: {fileID: 1391197670}
   - component: {fileID: 1391197669}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KYdustB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17029,7 +17099,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1396076866}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ikHandle3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17109,7 +17179,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1417865791}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_left_leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17252,7 +17322,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1465766360}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ikHandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17282,7 +17352,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1476231726}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Left_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17312,7 +17382,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1479495597}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_right_foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17394,7 +17464,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1514592300}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ikHandle5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17478,7 +17548,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1567705751}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: torso_ctrl_curve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17570,7 +17640,7 @@ GameObject:
   - component: {fileID: 1611915126}
   - component: {fileID: 1611915128}
   - component: {fileID: 1611915127}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left_leg_upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17645,7 +17715,7 @@ GameObject:
   - component: {fileID: 1612167200}
   - component: {fileID: 1612167202}
   - component: {fileID: 1612167201}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: missile_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17718,7 +17788,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1617251213}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17752,7 +17822,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1620070342}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_right_toe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17782,7 +17852,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1636947365}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17880,7 +17950,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1643515660}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ikHandle4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17910,7 +17980,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1663033221}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ikHandle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17944,8 +18014,7 @@ GameObject:
   - component: {fileID: 1665281282}
   - component: {fileID: 1665281280}
   - component: {fileID: 1665281284}
-  - component: {fileID: 1665281285}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground_Mech
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -17984,6 +18053,7 @@ Transform:
   - {fileID: 1476231726}
   - {fileID: 1680460077}
   - {fileID: 402390331}
+  - {fileID: 1005493092}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -18032,6 +18102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49ef66ceced2e1048b8ea2eb76dae0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fire: 0
   healthPivot: {fileID: 402390331}
   healthBar: {fileID: 1824828056}
   startBound: {fileID: 1307132550}
@@ -18044,18 +18115,6 @@ MonoBehaviour:
   shootingSpeed: 10
   rotateSpeed: 250
   fireRate: 5
---- !u!65 &1665281285
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1665281279}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20, y: 30, z: 500}
-  m_Center: {x: 0, y: 12, z: 0}
 --- !u!1001 &1669862677
 Prefab:
   m_ObjectHideFlags: 0
@@ -18111,7 +18170,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1680460077}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Right_Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18193,7 +18252,7 @@ GameObject:
   - component: {fileID: 1694128490}
   - component: {fileID: 1694128492}
   - component: {fileID: 1694128491}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right_foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18375,7 +18434,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1824064641}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_left_knee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18407,7 +18466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1824828056}
   - component: {fileID: 1824828057}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Health_Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18554,7 +18613,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1856529618}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_right_ankle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18587,7 +18646,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1879842736}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18620,7 +18679,7 @@ GameObject:
   - component: {fileID: 1890881412}
   - component: {fileID: 1890881414}
   - component: {fileID: 1890881413}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18701,7 +18760,7 @@ GameObject:
   - component: {fileID: 1948274055}
   - component: {fileID: 1948274057}
   - component: {fileID: 1948274056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KYsphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22269,7 +22328,7 @@ GameObject:
   - component: {fileID: 2027424753}
   - component: {fileID: 2027424755}
   - component: {fileID: 2027424754}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right_leg_lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22344,7 +22403,7 @@ GameObject:
   - component: {fileID: 2034260530}
   - component: {fileID: 2034260532}
   - component: {fileID: 2034260531}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: polySurface58
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22712,7 +22771,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 2108908875}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: joint_left_foot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
