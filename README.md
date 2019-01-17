@@ -4,6 +4,8 @@
 
 ### It is a simple puzzle game that can be played using simple `Google Cardboard.`
 
+<img src="/Screenshots/636833578772964683.png">
+
 ### Player just need to point at the rotation button to rotate the mirrors in order to proceed the movement of light.
 ### You can tilt you head `Left` or `Right` to change the position from one mirror to another.
 ### You can edit the Player Speed, Fire Rate, Magazine Size, etc. in Unity Inspector itself.
@@ -13,15 +15,17 @@
 `The solution is to rotate every mirror at 45° Degrees`
 
 # Screenshots
-<img src="/Screenshots/1.png">
-<img src="/Screenshots/11.png">
-<img src="/Screenshots/2.png">
-<img src="/Screenshots/3.png">
-<img src="/Screenshots/9.png">
-<img src="/Screenshots/4.png">
-<img src="/Screenshots/5.png">
-<img src="/Screenshots/6.png">
-<img src="/Screenshots/7.png">
-<img src="/Screenshots/8.png">
-<img src="/Screenshots/10.png">
-<img src="/Screenshots/12.png">
+<img src="/Screenshots/636833578991365229.png">
+<img src="/Screenshots/636833579082964091.png">
+<img src="/Screenshots/636833579533426340.png">
+<img src="/Screenshots/636833579785365280.png">
+<img src="/Screenshots/636833580315866074.png">
+<img src="/Screenshots/636833580633463956.png">
+<img src="/Screenshots/636833580745666693.png">
+<img src="/Screenshots/636833580953763465.png">
+<img src="/Screenshots/636833581108651099.png">
+<img src="/Screenshots/636833581320941473.png">
+<img src="/Screenshots/636833581436462405.png">
+<img src="/Screenshots/636833581988367242.png">
+<img src="/Screenshots/636833582289962563.png">
+<img src="/Screenshots/636833582613865477.png">
