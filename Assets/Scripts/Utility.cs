@@ -13,4 +13,12 @@ public class Utility : MonoBehaviour
         mainCameraTransform = Camera.main.transform;
         isGameOver = false;
     }
+
+#if UNITY_EDITOR
+    [UnityEditor.MenuItem("Pseudo/Capture")]
+    public static void Capture()
+    {
+        ScreenCapture.CaptureScreenshot(string.Format("{0}.png", System.DateTime.Now.Ticks.ToString()));
+    }
+#endif
 }
